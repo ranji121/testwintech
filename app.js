@@ -41,7 +41,7 @@ ibmdb.open(connString, function(err, conn) {
 			 res.send("error occurred " + err.message);
 			}
 			else {
-                conn.query("select tabname from syscat.tables where owner = 'DASH6629' and type = 'T'", function(err,tblresult)
+                conn.query("select tabname from syscat.tables where owner = 'DASH100342' and type = 'T'", function(err,tblresult)
                 {if(err){console.log(err);}
                 else{
                 if(tblresult.tabname!="WINTECH"){
@@ -70,7 +70,7 @@ app.post('/degregister', function(req,res){
 			 res.send("error occurred " + err.message);
 			}
 			else {
-				conn.prepare("INSERT INTO DASH6629.WINTECH(NAME,EMAIL,ORG,INTERESTEDHACKATHON,TIMESTAMP,GITHUB,PROJECT) VALUES (?,?,?,?,?,?,?)", function(err, stmt) {		
+				conn.prepare("INSERT INTO DASH100342.WINTECH(NAME,EMAIL,ORG,INTERESTEDHACKATHON,TIMESTAMP,GITHUB,PROJECT) VALUES (?,?,?,?,?,?,?)", function(err, stmt) {		
 				if ( !err ) { 
 					console.log("successful"+stmt); 
                     stmt.execute([name,email,org,interestedhackathon,time,github,project],function(err,result){
