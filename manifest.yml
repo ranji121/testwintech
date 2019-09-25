@@ -2,7 +2,7 @@
 applications:
 - name: wintechcon
   disk_quota: 512M
-  memory: 512M
+  memory: 256M
   instances: 1
   command: node app.js
   buildpack: sdk-for-nodejs
