@@ -1,0 +1,11 @@
+---
+applications:
+- name: wintechcon2019
+  disk_quota: 512M
+  memory: 512M
+  instances: 1
+  command: node app.js
+  buildpack: sdk-for-nodejs
+  path: .
+  services:
+   - dashDBtest

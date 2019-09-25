@@ -1,0 +1,129 @@
+<html>
+<head>
+<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Registration</title>
+    <!-- web-fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Roboto:100,300,400,700,500' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" href="stylesheets/font-awesome.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Bootstrap -->
+    <link href="stylesheets/bootstrap.min.css" rel="stylesheet">
+    <!-- Style CSS -->
+    <link href="stylesheets/style.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style>
+    .box{
+    display: none;
+    }
+    </style>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.0.0.min.js"></script>
+    <script>
+    function ShowDiv() {
+        document.getElementById('showDiv').style.display = "block";
+        document.getElementById("github").required = true;
+        document.getElementById("fieldproject1").required = true;
+        
+    }
+      function HideDiv(){
+        document.getElementById('showDiv').style.display = "none";
+        document.getElementById("github").required = false;
+        document.getElementById("fieldproject1").required = false;
+     }
+    </script>
+</head>
+<body>
+    <div class="jumbotron" style>
+    <h1 class="display-4">IEEE WinTechCon 2019</h1>
+        <h3>IBM Booth Hackathon Registration</h3>
+    <hr class="my-4">
+    <p><b>Event Timing:</b> 27th September 2019<br/>
+    <b>Venue:</b> Scarlet Hall, Sheraton Grand, Whitefield, Bengaluru<br/>
+    <b>Theme:</b> Future Technologies for a Smart, Safe and Sustainable World</p>
+    </div>
+	<div class="container-fluid"> 
+		
+		<div class="col-md-8 col-xs-12 col-sm-12 col-md-offset-2">
+			<form method="POST" action="/degregister">
+				<div class="form-group">
+									<b><span style="color:#FF0000">*</span>Name:</b>
+									<input type="text" class="form-control input-sm"
+										id="name" name="name" placeholder="Please enter your full name" required>	
+									<br/>
+									
+									<b><span style="color:#FF0000">*</span>Email ID:</b>
+									<input type="email" class="form-control input-sm"
+										id="email" name="email" placeholder="Please enter valid email id" required>
+									<br/>
+									
+									<b><span style="color:#FF0000">*</span>Organization:</b>
+									<input type="text" class="form-control input-sm"
+										id="org" name="org" placeholder="Please enter your organization name" required>
+										 
+									<br/>
+                                    <b><span style="color:#FF0000">*</span>Will you be interested in Hackathon?</b>
+                                    <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="fieldinterested" id="fieldinterested1" value="yes" onclick="ShowDiv()" required>
+                                    <label class="form-check-label" for="exampleRadios1" required>Yes</label>
+                                    </div>
+                                    <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="fieldinterested" id="fieldinterested2" value="no" onclick="HideDiv()">
+                                    <label class="form-check-label" for="exampleRadios2">No</label>
+                                    </div>
+                                    <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="fieldinterested" id="fieldinterested3" value="maybe" onclick="HideDiv()">
+                                    <label class="form-check-label" for="exampleRadios3">Maybe</label>
+                                    </div>
+                                    </div>  
+                                    <br/>
+                                    <div id="showDiv" class="box" style="width:100%">
+									<b><span style="color:#FF0000">*</span>Please enter your Github ID</b>
+                                    <input type="text" class="form-control input-sm" id="github" name="github" placeholder="Example:https://github.com/JohnDoe" required>	  
+									<br/>
+                                    <div class="alert alert-info" role="alert">
+                                        <p><b>Hackathon Github Project Space- <a href="https://github.com/wintechconibm" target="_blank">https://github.com/wintechconibm</a></b></p>
+                                    </div>
+                                    <br/>
+                                    <div class="alert alert-info" role="alert">
+                                    <p><b>Hackathon Slack Channel- #Wintechcon-Hackathon</b></p>
+                                    </div>
+                                    <br/> 
+                                    <b><span style="color:#FF0000">*</span>Hackathon Project you might be interested in?</b><br/>
+                                    <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="fieldproject" id="fieldproject1" value="conversational_chatbot" required>
+                                    <label class="form-check-label" for="exampleRadios1"><a href="https://developer.ibm.com/patterns/building-a-chatbot-with-kubernetes-watson-assistant-and-elastic-search/" target="_blank">Conversational Bot</a>-A cloud-based conversational bot to provide information related to trending books and recommendations based on the interest area</label><br/>
+                                    </div>
+                                    <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="fieldproject" id="fieldproject2" value="cognitive_traffic_analysis">
+                                    <label class="form-check-label" for="exampleRadios2"><a href="https://developer.ibm.com/patterns/create-a-real-time-object-detection-app-using-watson-machine-learning/" target="_blank">Cognitive Traffic Analysis</a>-Identifying impact of U-turn on traffic density using image processing and object detection</label><br/>
+                                    </div>
+                                    <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="fieldproject" id="fieldproject3" value="loan_credit">
+                                    <label class="form-check-label" for="exampleRadios3">Loan Credit Default Risk Prediction-Predict loan defaulters and how capable each applicant is of repaying a loan back to a bank</label> 
+                                    </div>
+									<br/>
+									</div>
+									</div>
+									<br/>
+									<div class="col-md-6 col-md-offset-3">
+									<input type="submit" class="btn btn-primary btn-lg btn-block"
+										 value="Submit">
+									<br/>
+								</div>	
+							
+			</form>
+		</div>
+		
+	</div>
+    <script src="javascripts/bootstrap.min.js"></script>    
+</body>
+</html>
