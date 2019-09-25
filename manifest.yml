@@ -1,6 +1,6 @@
 ---
 applications:
-- name: wintechcon2019
+- name: wintechcon
   disk_quota: 512M
   memory: 512M
   instances: 1
@@ -8,4 +8,4 @@ applications:
   buildpack: sdk-for-nodejs
   path: .
   services:
-   - dashDBtest
+   - Db2 Warehouse-gm
