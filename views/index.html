@@ -28,7 +28,7 @@
 		}
 	</style>
 	<script type="text/javascript" src="https://code.jquery.com/jquery-2.0.0.min.js"></script>
-	<script>
+<!--	<script>
 		function ShowDiv() {
 			document.getElementById('showDiv').style.display = "block";
 			document.getElementById("github").required = true;
@@ -41,101 +41,11 @@
 			document.getElementById("github").required = false;
 			document.getElementById("fieldproject1").required = false;
 		}
-	</script>
+	</script> -->
 </head>
 
 <body>
-	<div class="jumbotron" style>
-		<h1 class="display-4">IEEE WinTechCon 2019</h1>
-		<h3>IBM Booth Hackathon Registration</h3>
-		<hr class="my-4">
-		<p><b>Event Timing:</b> 27th September 2019<br/>
-			<b>Venue:</b> Scarlet Hall, Sheraton Grand, Whitefield, Bengaluru<br/>
-			<b>Theme:</b> Future Technologies for a Smart, Safe and Sustainable World</p>
-	</div>
-	<div class="container-fluid">
-    <div class="col-md-8 col-xs-12 col-sm-12 col-md-offset-2">
-			<form method="POST" action="/degregister">
-				<div class="form-group">
-					<b><span style="color:#FF0000">*</span>Name:</b>
-					<input type="text" class="form-control input-sm" id="name" name="name" placeholder="Please enter your full name" required>
-					<br/>
-
-					<b><span style="color:#FF0000">*</span>Email ID:</b>
-					<input type="email" class="form-control input-sm" id="email" name="email" placeholder="Please enter valid email id" required>
-					<br/>
-
-					<b><span style="color:#FF0000">*</span>Organization:</b>
-					<input type="text" class="form-control input-sm" id="org" name="org" placeholder="Please enter your organization name" required>
-
-					<br/>
-					<b><span style="color:#FF0000">*</span>Will you be interested in Hackathon?</b>
-					<div class="form-check">
-						<input class="form-check-input" type="radio" name="fieldinterested" id="fieldinterested1" value="yes" onclick="ShowDiv()">
-						<label class="form-check-label" for="exampleRadios1">Yes</label>
-					</div>
-					<div class="form-check">
-						<input class="form-check-input" type="radio" name="fieldinterested" id="fieldinterested2" value="no" onclick="HideDiv()">
-						<label class="form-check-label" for="exampleRadios2">No</label>
-					</div>
-					<div class="form-check">
-						<input class="form-check-input" type="radio" name="fieldinterested" id="fieldinterested3" value="maybe" onclick="HideDiv()">
-						<label class="form-check-label" for="exampleRadios3">Maybe</label>
-					</div>
-
-				</div>
-				<br/>
-				<div id="showDiv" class="box" style="width:100%">
-					<b><span style="color:#FF0000">*</span>Please enter your Github ID</b>
-					<input type="text" class="form-control input-sm" id="github" name="github" placeholder="Example:https://github.com/JohnDoe" required>
-					<br/>
-					<!--	<div class="alert alert-info" role="alert">
-						<p><b>Hackathon Github Project Space- <a href="https://github.com/wintechconibm" target="_blank">https://github.com/wintechconibm</a></b></p>
-					</div>
-					<br/>
-					<div class="alert alert-info" role="alert">
-						<p><b>Hackathon Slack Channel- #Wintechcon-Hackathon</b></p>
-					</div>
-					<br/>
-				-->
-					<b><span style="color:#FF0000">*</span>Hackathon Project you might be interested in?</b><br/>
-					<div class="form-check">
-						<input class="form-check-input" type="radio" name="fieldproject" id="fieldproject1" value="conversational_chatbot" required>
-						<label class="form-check-label" for="exampleRadios1"><a href="https://developer.ibm.com/patterns/building-a-chatbot-with-kubernetes-watson-assistant-and-elastic-search/" target="_blank">Conversational Bot</a></label><br/>
-						<h6>A cloud-based conversational bot to provide information related to trending books and recommendations based on the interest area</h6>
-					</div>
-					<div class="form-check">
-						<input class="form-check-input" type="radio" name="fieldproject" id="fieldproject2" value="cognitive_traffic_analysis">
-						<label class="form-check-label" for="exampleRadios2"><a href="https://developer.ibm.com/patterns/create-a-real-time-object-detection-app-using-watson-machine-learning/" target="_blank">Cognitive Traffic Analysis</a></label><br/>
-						<h6>Identifying impact of U-turn on traffic density using image processing and object detection</h6>
-					</div>
-					<div class="form-check">
-						<input class="form-check-input" type="radio" name="fieldproject" id="fieldproject3" value="loan_credit">
-						<label class="form-check-label" for="exampleRadios3">Loan Credit Default Risk Prediction</label>
-						<h6>Predict loan defaulters and how capable each applicant is of repaying a loan back to a bank</h6>
-					</div>
-					<div class="form-check">
-						<input class="form-check-input" type="radio" name="fieldproject" id="fieldproject4" value="semi_formal">
-						<label class="form-check-label" for="exampleRadios4">Smart Semi-formal Framework  </label>
-						<h6>Semi-formal search techniques are used in early design phases to find design bugs. 
-						The challenge is to apply Machine learning-based feature extraction techniques on a prior 
-						unsolved Semi-formal run to automatically identify/exclude special register signals like reset, 
-						shift registers from the heuristics in improving the search coverage and bug-finding probability.</h6>
-					</div>
-					<br/>
-				</div>
-				<div class="col-md-6 col-md-offset-3">
-			<input type="submit" class="btn btn-primary btn-lg btn-block" value="Submit">
-			<br/>
-		</div>
-		</form>
-		</div>
-		<br/>
-		
-
-	</div>
-
-	</div>
+	
 	<script src="javascripts/bootstrap.min.js"></script>
 </body>
 </html>
